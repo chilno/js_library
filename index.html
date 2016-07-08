@@ -1,0 +1,23 @@
+<head>
+	<script type="text/javascript" src="dojo_query.js"></script>
+</head>
+<body>
+	<p id="boo" >HEllo</p>
+</body>
+
+<script type="text/javascript">
+	console.log($Dojo('p').attr('id'));
+	$Dojo('p').click(function(){
+		alert($Dojo('p').attr('id'));
+	})
+	var dojo = $Dojo('p')
+	dojo.hover(function(){
+		// console.log("In");
+
+		dojo.attr('style','background-color: blue')
+	}, function(){
+		// console.log("Out");
+		dojo.attr('style', 'background-color: none')
+	})
+</script>
+
